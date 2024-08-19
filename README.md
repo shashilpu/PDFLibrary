@@ -1,5 +1,7 @@
 # PDFLibrary Web Application
-PDFLibrary Web Application in .NET Core 8.0 Blazor and C# A robust web application that allows users to upload, annotate, and save PDFs using Syncfusion PDF Viewer. Enhance your online reading experience with personalized annotations and easy access to your documents. Perfect for students, professionals, and anyone who works with PDFs regularly.
+
+## Overview
+Welcome to the PDFLibrary Web Application! This project is built using .NET Core 8.0 and C#. It allows users to upload PDFs to the server, annotate them using the Syncfusion PDF Viewer, and save them back to the server for future reference. This tool is designed to provide a better online reading experience with your personal PDFs.
 
 ## Features
 - **Upload PDFs**: Easily upload your PDF documents to the server.
