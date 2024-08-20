@@ -1,0 +1,45 @@
+﻿@page "/"
+@using PDFLibrary.Model.FileSystem
+@using PDFLibrary.Services.FileSystem
+@inject FileSystemService FileSystemService
+<PageTitle>Library</PageTitle>
+<h3>Book Shelf</h3>
+
+@if (fileSystemItems != null)
+{
+    @foreach (var item in fileSystemItems)
+    {
+        <ul>
+            <li>
+                @if (item.IsDirectory)
+                {
+                    @item.Name
+                }
+                else
+                {
+                    <a target="_blank" href="/viewer?param=@System.Web.HttpUtility.UrlEncode(item.Path)">@item.Name</a>
+                }
+
+                @if (item.Children.Any())
+                {
+                    <ul>
+                        <FileSystemTreeNode TItem="FileSystemItem" Items="item.Children" />
+                    </ul>
+                }
+            </li>
+        </ul>
+    }
+}
+else
+{
+    <p>Loading...</p>
+}
+
+@code {
+    private List<FileSystemItem> fileSystemItems;
+
+    protected override async Task OnInitializedAsync()
+    {
+        fileSystemItems = await FileSystemService.GetBookSelfItem();
+    }
+}
