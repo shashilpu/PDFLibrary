@@ -17,7 +17,7 @@ Welcome to the PDFLibrary Web Application! This project is built using .NET Core
 ### Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/PDFLibrary.git
+    git clone https://github.com/shashilpu/PDFLibrary.git
     ```
 2. Navigate to the project directory:
     ```bash
